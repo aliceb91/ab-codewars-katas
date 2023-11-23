@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions.*
 class TerminalGameMoveFunctionTest {
 
     @Test
-    fun `it returns the position value added to the move value * 2`() {
+    fun `it returns the position value added to the move value multiplied by 2`() {
         val underTest = TerminalGameMoveFunction()
         val expected: Int =  15
         val result: Int =  underTest.move(3, 6)
