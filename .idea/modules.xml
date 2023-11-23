@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/codewars-katas.iml" filepath="$PROJECT_DIR$/codewars-katas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ab-codewars-katas.iml" filepath="$PROJECT_DIR$/ab-codewars-katas.iml" />
     </modules>
   </component>
 </project>
