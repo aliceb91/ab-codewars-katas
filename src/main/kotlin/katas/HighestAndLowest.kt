@@ -4,7 +4,9 @@ class HighestAndLowest {
 
     fun highAndLow(numbers: String): String {
 
-        val sortedList = numbers.split(" ").map {it.toInt()}.sorted()
+        val numbersList: List<String> = numbers.split(" ")
+        val intList: List<Int> = numbersList.map {it.toInt()}
+        val sortedList: List<Int> = intList.sorted()
 
         return "${sortedList.last()} ${sortedList.first()}"
     }
