@@ -1,7 +1,5 @@
 package katas
 
-// Replaces all vowels in a string with exclamation marks.
-
 class ReplaceAllVowelsWithExclamationMarks {
 
     fun replace(s: String): String {

@@ -3,6 +3,8 @@ package katas
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 
+// Returns the first character of the string as an integer.
+
 class ParseNiceIntFromCharProblemTest {
 
     @Test

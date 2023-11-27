@@ -3,6 +3,8 @@ package katas
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 
+// Returns the new positional value of a game piece when the piece moves 2 * the number on the dice
+
 class TerminalGameMoveFunctionTest {
 
     @Test
