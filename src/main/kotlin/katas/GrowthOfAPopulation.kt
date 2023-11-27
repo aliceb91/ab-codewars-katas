@@ -9,7 +9,7 @@ class GrowthOfAPopulation {
         while (total < p) {
             counter += 1
             val num: Double = total + total * percentage + aug
-            total = num
+            total = Math.floor(num)
         }
         return counter
     }
