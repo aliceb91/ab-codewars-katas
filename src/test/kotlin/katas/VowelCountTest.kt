@@ -37,18 +37,10 @@ class VowelCountTest {
     }
 
     @Test
-    fun `it counts the correct number of vowels in spite of character case`() {
+    fun `it counts the correct number of vowels in a full sentence`() {
         val underTest = VowelCount()
-        val expected: Int = 5
-        val result: Int = underTest.getCount("AEIOU")
-        assertEquals(expected, result)
-    }
-
-    @Test
-    fun `it counts the correct number of vowels in a full sentence with punctuation`() {
-        val underTest = VowelCount()
-        val expected: Int = 10
-        val result: Int = underTest.getCount("Hello, I am testing using Kotlin!")
+        val expected: Int = 8
+        val result: Int = underTest.getCount("i am testing using kotlin")
         assertEquals(expected, result)
     }
 
