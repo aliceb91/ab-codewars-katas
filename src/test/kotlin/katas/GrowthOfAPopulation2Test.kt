@@ -2,6 +2,7 @@ package katas
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Timeout
 
 // In a small town the population is p0 = 1000 at the beginning of a year.
 // The population regularly increases by 2 percent per year.
@@ -35,38 +36,56 @@ import org.junit.jupiter.api.Assertions.*
 
 class GrowthOfAPopulation2Test {
 
+
     @Test
     fun `when given a static population and target of 1000 are given, it returns 0`() {
         val underTest = GrowthOfAPopulation2()
-        val expected = 0
-        val result = underTest.nbYear(1000, 0.0, 0, 1000)
+        val expected: Int = 0
+        val result: Int = underTest.nbYear(1000, 0.0, 0, 1000)
         assertEquals(expected, result)
     }
 
     @Test
     fun `when given a population of 1000 with a target of 1100 and an aug of 50 it returns 2`() {
         val underTest = GrowthOfAPopulation2()
-        val expected = 2
-        val result = underTest.nbYear(1000, 0.0, 50, 1100)
+        val expected: Int = 2
+        val result: Int = underTest.nbYear(1000, 0.0, 50, 1100)
         assertEquals(expected, result)
     }
 
     @Test
     fun `when given a population of 1000 with a target of 1200 and an aug of 70 it returns 3`() {
         val underTest = GrowthOfAPopulation2()
-        val expected = 3
-        val result = underTest.nbYear(1000, 0.0, 70, 1200)
+        val expected: Int = 3
+        val result: Int = underTest.nbYear(1000, 0.0, 70, 1200)
         assertEquals(expected,result)
     }
 
     @Test
     fun `when given a starting population, aug value and population target, it returns the appropriate result`() {
         val underTest = GrowthOfAPopulation2()
-        val expected1 = 4
-        val expected2 = 5
-        val result1 = underTest.nbYear(900, 0.0, 30, 1000)
-        val result2 = underTest.nbYear(1200, 0.0, 21, 1300)
+        val expected1: Int = 4
+        val expected2: Int = 5
+        val result1: Int = underTest.nbYear(900, 0.0, 30, 1000)
+        val result2: Int = underTest.nbYear(1200, 0.0, 21, 1300)
         assertEquals(expected1, result1)
         assertEquals(expected2, result2)
+    }
+
+    @Test
+    @Timeout(10)
+    fun `when given a starting population of 500 and a percentage of 20 it takes 2 years to reach a target of 700`() {
+        val underTest = GrowthOfAPopulation2()
+        val expected: Int = 2
+        val result: Int = underTest.nbYear(500, 20.0, 0, 700)
+        assertEquals(expected, result)
+    }
+
+    @Test
+    fun `when given a full set of arguments, it returns the correct number of years`() {
+        val underTest = GrowthOfAPopulation2()
+        val expected: Int = 4
+        val result: Int = underTest.nbYear(500, 10.0, 10, 700)
+        assertEquals(expected, result)
     }
 }
