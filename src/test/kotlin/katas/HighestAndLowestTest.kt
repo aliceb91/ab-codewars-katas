@@ -68,4 +68,12 @@ class HighestAndLowestTest {
         val result: String = underTest.highAndLow("1 123 -42 4 -5")
         assertEquals(expected, result)
     }
+
+    @Test
+    fun `when given a single number, it returns the number twice`() {
+        val underTest = HighestAndLowest()
+        val expected: String = "15 15"
+        val result: String = underTest.highAndLow("15")
+        assertEquals(expected, result)
+    }
 }
