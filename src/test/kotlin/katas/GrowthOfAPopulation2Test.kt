@@ -3,6 +3,7 @@ package katas
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Timeout
+import kotlin.test.assertFailsWith
 
 // In a small town the population is p0 = 1000 at the beginning of a year.
 // The population regularly increases by 2 percent per year.
@@ -70,6 +71,28 @@ class GrowthOfAPopulation2Test {
         val result2: Int = underTest.nbYear(1200, 0.0, 21, 1300)
         assertEquals(expected1, result1)
         assertEquals(expected2, result2)
+    }
+
+    @Test
+    fun `when given an impossible value for percent and aug, it throws an error`() {
+        val thrown = assertFailsWith<IllegalArgumentException>(
+            message = "percent and aug of 0 did not throw an error.",
+            block = {
+                GrowthOfAPopulation2().nbYear(500, 0.0, 0, 700)
+            }
+        )
+        assertEquals("Your population will never increase.", thrown.message)
+    }
+
+    @Test
+    fun `when given an impossible value for pp0 and aug, it throws and error`() {
+        val thrown = assertFailsWith<IllegalArgumentException>(
+            message = "pp0 and aug of 0 did not throw an error.",
+            block = {
+                GrowthOfAPopulation2().nbYear(0, 5.0, 0, 700)
+            }
+        )
+        assertEquals("Your population will never increase.", thrown.message)
     }
 
     @Test
