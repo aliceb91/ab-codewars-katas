@@ -7,7 +7,7 @@ class AdventOfCode2015Day1 {
         var total: Int = 0
         var downstairsAt: Int? = null
         var progress: Int = 1
-        instructionArr.map {
+        instructionArr.forEach {
             if (it == '(') {
                 total += 1
             } else if (it == ')') {
