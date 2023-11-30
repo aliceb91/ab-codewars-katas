@@ -25,21 +25,21 @@ class CharacterWithLongestConsecutiveRepetitionTest {
         assertEquals(expected, result)
     }
 
-    @Test
-    fun `given a string of a, it returns (a, 1)`() {
-        val underTest = CharacterWithLongestConsecutiveRepetition()
-        val expected: Pair<Char?, Int> = Pair('a', 1)
-        val result: Pair<Char?, Int> = underTest.longestRepetition("a")
-        assertEquals(expected, result)
-    }
+//    @Test
+//    fun `given a string of a, it returns (a, 1)`() {
+//        val underTest = CharacterWithLongestConsecutiveRepetition()
+//        val expected: Pair<Char?, Int> = Pair('a', 1)
+//        val result: Pair<Char?, Int> = underTest.longestRepetition("a")
+//        assertEquals(expected, result)
+//    }
 
-    @Test
-    fun `given a string of b, it returns (b, 1)`() {
-        val underTest = CharacterWithLongestConsecutiveRepetition()
-        val expected: Pair<Char?, Int> = Pair('b', 1)
-        val result: Pair<Char?, Int> = underTest.longestRepetition("b")
-        assertEquals(expected, result)
-    }
+//    @Test
+//    fun `given a string of b, it returns (b, 1)`() {
+//        val underTest = CharacterWithLongestConsecutiveRepetition()
+//        val expected: Pair<Char?, Int> = Pair('b', 1)
+//        val result: Pair<Char?, Int> = underTest.longestRepetition("b")
+//        assertEquals(expected, result)
+//    }
 
     @Test
     fun `given multiple single character strings, it returns (character, 1)`() {
@@ -52,21 +52,21 @@ class CharacterWithLongestConsecutiveRepetitionTest {
         assertEquals(expected2, result2)
     }
 
-    @Test
-    fun `given aa, it returns (a, 2)`() {
-        val underTest = CharacterWithLongestConsecutiveRepetition()
-        val expected: Pair<Char?, Int> = Pair('a', 2)
-        val result: Pair<Char?, Int> = underTest.longestRepetition("aa")
-        assertEquals(expected, result)
-    }
-
-    @Test
-    fun `given aaa, it returns (a, 3)`() {
-        val underTest = CharacterWithLongestConsecutiveRepetition()
-        val expected: Pair<Char?, Int> = Pair('a', 3)
-        val result: Pair<Char?, Int> = underTest.longestRepetition("aaa")
-        assertEquals(expected, result)
-    }
+//    @Test
+//    fun `given aa, it returns (a, 2)`() {
+//        val underTest = CharacterWithLongestConsecutiveRepetition()
+//        val expected: Pair<Char?, Int> = Pair('a', 2)
+//        val result: Pair<Char?, Int> = underTest.longestRepetition("aa")
+//        assertEquals(expected, result)
+//    }
+//
+//    @Test
+//    fun `given aaa, it returns (a, 3)`() {
+//        val underTest = CharacterWithLongestConsecutiveRepetition()
+//        val expected: Pair<Char?, Int> = Pair('a', 3)
+//        val result: Pair<Char?, Int> = underTest.longestRepetition("aaa")
+//        assertEquals(expected, result)
+//    }
 
     @Test
     fun `given multiple characters of a single letter, it returns (character, count)`() {
@@ -153,7 +153,7 @@ class CharacterWithLongestConsecutiveRepetitionTest {
     }
 
     @Test
-    fun `given multiple characters of the same consecutive frequency, it retursn the first isntance`() {
+    fun `given multiple characters of the same consecutive frequency, it returns the first isntance`() {
         val underTest = CharacterWithLongestConsecutiveRepetition()
         val expected1: Pair<Char?, Int> = Pair('a', 2)
         val expected2: Pair<Char?, Int> = Pair('h', 3)
