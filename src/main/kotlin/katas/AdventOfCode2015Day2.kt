@@ -20,6 +20,5 @@ class AdventOfCode2015Day2 {
             sum += (2 * length * width) + (2 * width * height) + (2 * height * length) + smallest
         }
         return mapOf("paper" to sum, "ribbon" to ribbon)
-
     }
 }
