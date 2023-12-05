@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Assertions.*
 class AdventOfCode2015Day1Test {
 
     @Test
-    fun `given an empty string, it returns 0`() {
+    fun `given an empty string, "" it returns 0`() {
         val underTest = AdventOfCode2015Day1()
         val expected: Int = 0
         val result: Int? = underTest.whatFloor("")["endpoint"]
