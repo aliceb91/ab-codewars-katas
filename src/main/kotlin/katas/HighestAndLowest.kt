@@ -4,12 +4,13 @@ class HighestAndLowest {
 
     fun highAndLow(numbers: String): String {
 
-        val sorted: List<Int> = numbers.split(" ")
+        return numbers.split(" ")
             .map {
                 it.toInt()
             }
             .sorted()
-
-        return "${sorted.last()} ${sorted.first()}"
+            .let {
+                "${it.last()} ${it.first()}"
+            }
     }
 }
