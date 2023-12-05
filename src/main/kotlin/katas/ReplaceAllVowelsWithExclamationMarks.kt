@@ -6,7 +6,7 @@ class ReplaceAllVowelsWithExclamationMarks {
 
         return s.toCharArray()
             .map {
-                if (it.uppercase() in "AUIOU") {
+                if (it.uppercase() in "AEIOU") {
                     "!"
                 } else {
                     it.toString()
